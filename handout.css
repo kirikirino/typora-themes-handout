@@ -1,0 +1,308 @@
+/* 基本配置 */
+#write {
+	font-size: 15px;
+  max-width: 725px;
+	text-align: justify;
+}
+
+/* 颜色配置 */
+:root {
+	--side-bar-bg-color: #E3F2FD;
+	--meta-content-color: #2196F3;
+
+	--main-color: #2196F3;
+	--main-text-color: #2196F3;
+	--main-text-hover-color: #F37E21;
+	--text-bg-color: #E3F2FD;
+}
+
+/* 字体调整 */
+@font-face {
+  font-family: 'Source Han Serif';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Source Han Serif'), local('Source Han Serif'),url('./handout/SourceHanSerifSC-VF.otf.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Source Han Serif Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Source Han Serif Bold'), local('Source Han Serif Bold'),url('./handout/SourceHanSerifSC-Bold.woff2') format('woff2');
+}
+body {
+    font-family: "Source Han Serif","SimSun";
+		color: #000;
+}
+
+/* 侧边栏配置 */
+.html-for-mac #typora-sidebar {
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+
+/* 标题配置 */
+h1 {
+  text-align: center;
+	font-size: 2.2em;
+	font-weight: 700;
+	line-height: 1.1;
+	padding-top: 16px;
+	margin-bottom: 4px;
+}
+h1:after {
+    content: '';
+    display: block;
+    margin: 0.2em auto 0;
+    width: 45%;
+    height: 2px;
+    border-bottom: 2px solid var(--main-color);
+}
+h2, h3, h4, h5, h6 {
+	line-height: 1.5em;
+	margin-top: 1.7em;
+	margin-bottom: 4px;
+}
+h2 {
+	font-size: 1.4em;
+	margin: 30px 10px 20px 0;
+	padding-left: 0px;
+	font-weight: 700;
+  border-bottom: 2px solid var(--main-color);
+	break-before: recto;
+}
+h2 span {
+    display: inline-block;
+    font-weight: bold;
+    background: var(--main-color);
+    color: #ffffff;
+    padding: 3px 10px 1px;
+    margin-right: 3px;
+}
+h2::after {
+    display: inline-block;
+ content: "";
+ vertical-align: bottom;
+ border-bottom: 36px solid #efebe9;
+ border-right: 20px solid transparent;
+}
+h3 {
+	font-weight: 700;
+	font-size: 1.2em;
+	line-height: 1.4;
+	margin: 10px 0 5px;
+	padding-top: 10px;
+  padding-left: 9px;
+  border-left: 5px solid var(--main-color);
+}
+h4 {
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 1.1em;
+	line-height: 1.4;
+	margin: 10px 0 5px;
+	padding-top: 10px
+}
+h5, h6 {
+	font-size: .9em;
+}
+h5 {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+h6 {
+	font-weight: normal;
+	color: #AAA;
+}
+
+/* 分割线配置 */
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+/* 超链接配置 */
+a {
+    color: var(--main-text-color);
+    padding: 0 2px;
+}
+#write a {
+    border-bottom: 1px solid var(--main-text-color);
+    color: var(--main-text-color);
+    text-decoration: none;
+}
+#write a.md-toc-inner {
+    line-height: 1.6;
+    white-space: pre-line;
+    border-bottom: none;
+}
+#write a:hover {
+    border-bottom: 2px solid var(--main-text-hover-color);
+    color: var(--main-text-hover-color);
+}
+
+/* 列表配置 */
+#write ol,
+#write ul {
+    padding-left: 25px;
+    margin: .3rem 0;
+}
+#write ol>li,
+#write ul>li {
+    color: var(--main-text-color);
+    font-weight: bold;
+}
+#write ol>li>*,
+#write ul>li>* {
+    color: #333;
+    font-weight: normal;
+}
+#write ol>li>*:not(ol):not(ul),
+#write ul>li>*:not(ol):not(ul) {
+    padding-left: .25rem;
+}
+#write ul {
+    list-style-type: disc;
+}
+
+/* 任务列表配置 */
+.md-task-list-item>input {
+	  margin-left: -0.9rem;
+    -webkit-appearance: none;
+}
+.md-task-list-item>input:before {
+    content: '';
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 1rem;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    margin-top: -1rem;
+	  margin-left: -0.9rem;
+    transition: all 0.2s linear;
+}
+.md-task-list-item>input:checked:before,
+.md-task-list-item>input[checked]:before {
+    content: '\2714';
+    font-size: 0.9rem;
+		line-height: 0.8rem;
+    color: #fff;
+    border: 1px solid var(--main-color);
+    background-color: var(--main-color);
+}
+
+/* 引用块配置 */
+blockquote {
+    border-left: 4px solid var(--main-color);
+    padding: 10px 15px;
+    background-color: var(--text-bg-color);
+}
+
+/* 代码块配置 */
+.cm-s-inner .CodeMirror-linenumber {
+    color: var(--main-color);
+}
+
+/* 表格配置 */
+table {
+  padding: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 1em;
+  font: inherit;
+  border: 0;
+  margin: 0 auto;
+}
+
+tbody {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+table tr {
+  border: 0;
+  border-top: 1px solid #CCC;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+table tr:nth-child(2n) {
+  background-color: #F8F8F8;
+}
+
+table tr th, table tr td {
+  font-size: 16px;
+  border: 1px solid #CCC;
+  margin: 0;
+  padding: 5px 10px;
+}
+
+table tr th {
+  font-weight: bold;
+  color: #eee;
+  border: 1px solid var(--main-color);
+  background-color: var(--main-color);
+}
+
+/* 图表配置 */
+:root {
+  --mermaid-theme: default;
+  --mermaid-flowchart-curve: basis;
+}
+.node rect,
+.node circle,
+.node ellipse,
+.node polygon,
+.node path {
+  fill: var(--text-bg-color) !important;
+  stroke: var(--main-color) !important;
+}
+
+/* 加粗配置 */
+#write strong {
+		font-family: "Source Han Serif Bold"，"Source Han Serif","SimSun";
+    color: var(--main-text-color);
+}
+
+/* 斜体配置 */
+#write em {
+    padding: 0 2px 0 2px;
+    font-style: italic;
+    color: var(--main-text-color);
+}
+
+/* 行间代码配置 */
+#write code,
+tt {
+    padding: 2px 4px;
+    border-radius: 2px;
+		font-size: 0.92rem;
+    color: var(--main-text-color);
+    background-color: var(--text-bg-color);
+}
+tt {
+    margin: 0 2px;
+}
+
+/* 高亮配置 */
+#write mark {
+		padding-left: 6px;
+		padding-right: 6px;
+		display: inline-block;
+		font-weight: 700;
+		background-color: var(--text-bg-color);
+		border: 1px solid var(--main-text-color);
+		border-top: 4px solid var(--main-text-color);
+}
+mark {
+    margin: 10px 10px;
+}
