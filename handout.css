@@ -378,7 +378,7 @@ tt {
 		border-top: 4px solid var(--main-text-color);
 }
 mark {
-    margin: 10px 10px;
+		margin-right: 10px;
 }
 
 /* 间距配置 */
